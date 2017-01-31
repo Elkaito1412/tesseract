@@ -1,4 +1,4 @@
-var maxcells = 50;
+var maxcells = 100;
 var cells = [];
 var virus = [];
 function setup(){
