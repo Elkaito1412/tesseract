@@ -1,4 +1,4 @@
-var maxcells = 100;
+var maxcells = 50;
 var cells = [];
 var virus = [];
 function setup(){
@@ -8,8 +8,7 @@ function setup(){
 
 function draw(){
   translate(width/2,height/2);
-  background(0)
-  noStroke();
+  background(0);
   show();
   cycle();
   infect();
@@ -31,9 +30,12 @@ var Cell = function(x,y){
 ////////////////////////////////////////////////////////:Displaying the cells/////////////////////////////////////
 function show(){
   for(i=0;i<cells.length;i++){
+    stroke(150);
+    strokeWeight(2);
     fill(255,255,255,50);
     ellipse(cells[i].x,cells[i].y,cells[i].w,cells[i].w);
     fill(255);
+    noStroke();
     ellipse(cells[i].x,cells[i].y,cells[i].n,cells[i].n);
     cells[i].w += cells[i].grow;
     cells[i].x += map(noise(cells[i].avx),0,1,-1,1);
