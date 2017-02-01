@@ -1,11 +1,13 @@
-var maxcells = 50; //maximum number of cells after reaching this number cells will grow withoutdoing mitozis
+var maxcells = 100; //maximum number of cells after reaching this number cells will grow withoutdoing mitozis
 var deaths = 0; //a variable for displaying the number of death
 var cells = []; //the array containing cells
 var virus = []; //the array containing viruses
+var chances = 1;//total chances you have that means total viruses you can make by clicking
 function setup(){
  createCanvas(550,550);
  cells[0]=new Cell(random(-width/2,width/2),random(-height/2,height/2)); //making the first cell in a random place
-}
+ cells[1]=new Cell(random(-width/2,width/2),random(-height/2,height/2));
+ }
 
 function draw(){
   translate(width/2,height/2); //i liked to translate the origin to the center of the canvas
@@ -146,7 +148,12 @@ function show(){
       }
     ///////////////////////////////////////////////////////////////////////////////////////////////
       function mouseClicked(){//handles the event of the mouse is clicked
+        if(chances > 0){//if there is still some chances
         virus.push(new Virus(mouseX-width/2,mouseY-height/2));//making a new virus in the pressed area
+        chances -= 1;//minus one chance
+        document.getElementById('chnc').innerHTML = chances;//writing available chances in the html
+      }
+
       }
       function movirus(){//moving the virus in the mouse direction
         for (var i = 0; i < virus.length; i++) {//looping thru all viruses
