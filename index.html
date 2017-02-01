@@ -1,16 +1,22 @@
 <html>
   <head>
-    <title>Cells</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <title>Cells'n'viruses</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://cdnjs.com/libraries/p5.js"></script>
   </head>
   <body>
     <h1 style='position:absolute; top:10px; left:0px;'>Cells: <span id = 'all'></span></h1>
-    <h1 style='position:absolute; top:20px; left:0px;'>Deaths: <span id = 'dth'></span></h1>
+    <h1 style='position:absolute; top:50px; left:0px;'>Deaths: <span id = 'dth'></span></h1>
     <h1 style=' position:absolute; top:0px; right:0px;'>Viruses: <span id = 'vrs'></span></h1>
+    <h1 style='position:absolute; top:50px; right:0px;'>Chances: <span id = 'chnc'>1</span></h1>
     <h1 style='text-align:center'>Cells VS Viruses</h1>
+    <h1 id='end' style='text-align:center'></h1>
     <script src="sketch.js"></script>
     </body>
     <style>
+    body{
+      font-family: Quicksand;
+    }
     #defaultCanvas0{
       position:relative;
       left:25%;
