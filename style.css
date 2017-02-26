@@ -12,7 +12,7 @@ body{
   padding:0px;
   height:500px;
   background-position: fixed;
-  background-image: url(back.jpg);
+  background-image: url(back-1.jpg);
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
@@ -68,6 +68,7 @@ nav ul{
   margin:0px;
   overflow-x: hidden;
   z-index:5;
+  box-shadow: 0px 2px 5px black;
 }
 nav ul li{
   margin:0px 5px 0px 5px;

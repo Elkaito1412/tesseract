@@ -103,8 +103,23 @@ Pour atteindre ce but, nous avons opté pour les axes suivants :</p>
 </body>
 </html>
 <script>
+var images = ['back-1.jpg','back-2.jpg','back-3.jpg','back-4.jpg','back-5.jpg'];
+var i=0 ;
+var imag = document.getElementsByClassName('first_folio');
+setInterval(swap,5000);
 $(document).ready(function(){
+  swap();
   $("#cover_title").fadeIn(1000);
   $("#cover_btn").fadeIn(1500);
 });
+function swap(){
+$(".first_folio").fadeOut(300,function(){
+  $(".first_folio").css('background-image','url('+images[i]+')');
+  $(".first_folio").fadeIn(300,function(){
+    if(i==images.length-1){
+    i=0;
+  }else {i++};
+  });
+})
+}
 </script>
