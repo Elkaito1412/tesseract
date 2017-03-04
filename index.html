@@ -13,6 +13,9 @@
     <li>
       <img src='favicon.ico' height='50px' alt='institution Al Inbiaat privée'>
     </li>
+    <li>
+      <div class='change_space'><p id='change'>Succès</p></div>
+    </li>
     <li class="nav_active">
       <p>Accueil</p>
     </li>
@@ -29,13 +32,13 @@
       <p>La vie a l'école</p>
     </li>
   </ul>
+  <!--end of making the nav bar-->
 </nav>
-<!--end of making the nav bar-->
 <body>
   <div class='first_folio'>
     <!--this contains the first folio image-->
       <div class='cover'>
-        <div id='cover_container'><span id='cover_title'>Institution Al Inbiaat privée</span></br>
+        <div id='cover_container'><span id='cover_title'>Institution Al Inbiaat privée </span></br>
       <a href='http://www.inbiaat.com'><button id='cover_btn' >Visiter le site web</button></a>
     </div></div>
   </div>
@@ -104,11 +107,16 @@ Pour atteindre ce but, nous avons opté pour les axes suivants :</p>
 </html>
 <script>
 var images = ['back-1.jpg','back-2.jpg','back-3.jpg','back-4.jpg','back-5.jpg'];
-var i=0 ;
+var slogs = ['Succés','Confiance','Compétances','éducation'];
+var i=0;
+var a=0;
 var imag = document.getElementsByClassName('first_folio');
-setInterval(swap,5000);
+var spann = document.getElementById('change');
+setInterval(swap,10000);
+setInterval(slog,3000);
 $(document).ready(function(){
   swap();
+  slog();
   $("#cover_title").fadeIn(1000);
   $("#cover_btn").fadeIn(1500);
 });
@@ -121,5 +129,17 @@ $(".first_folio").fadeOut(300,function(){
   }else {i++};
   });
 })
+}
+function slog(){
+  $("#change").slideUp('slow',function(){
+    spann.innerHTML = slogs[a];
+    $("#change").slideDown('slow');
+    if(a == slogs.length-1){
+      a=0;
+    }
+    else{
+      a++;
+    };
+  });
 }
 </script>

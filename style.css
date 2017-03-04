@@ -6,6 +6,11 @@ body{
   margin:0px;
   background-color:rgba( 32, 72, 168 ,0.1);
 }
+.change_space{
+  width:100px;
+  height:50px;
+  display:block;
+}
 .first_folio{
   width:100%;
   margin:0px;
@@ -76,7 +81,7 @@ nav ul li{
   float:left;
   color:white;
 }
-nav ul li:not(:first-child):hover{
+nav ul li:not(:first-child):not(:nth-child(2)):hover{
   background-color:white;
   color:#2048a8;
 }
