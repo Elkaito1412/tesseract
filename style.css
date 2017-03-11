@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Pacifico|Raleway');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Overlock|Poiret+One|Roboto|Unica+One');body{
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Overlock|Poiret+One|Roboto|Unica+One');
+body{
   background-color:white;
-  font-family: 'Overlock';
+  font-family: 'Unica One';
   margin:0px;
   display:block;
 }
@@ -53,7 +54,7 @@ nav li:not(:nth-child(1)):hover{
   color:white;
   top:45%;
   position:relative;
-  font-family:'Overlock';
+  font-family:'Unica One';
 }
 .title_box{
   width:100%;
