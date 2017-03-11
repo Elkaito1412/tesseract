@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Pacifico|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Overlock|Poiret+One|Roboto|Unica+One');body{
+  background-color:white;
+  font-family: 'Overlock';
+  margin:0px;
+  display:block;
+}
+nav{
+  position:fixed;
+  top:0px;
+  left:0px;
+  margin:0px;
+  width:100%;
+  height:50px;
+  background-size: 30px;
+  background-position: 80px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: black;
+  color:white;
+}
+nav img{
+  height:50px;
+  filter: grayscale(100%);
+}
+nav h2{
+  font-family: 'Unica One';
+  position:relative;
+  top:-9px;
+}
+nav ul{
+  list-style: none;
+  margin:0px;
+}
+nav li{
+  margin:0px;
+  float:left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+nav li:not(:nth-child(1)):hover{
+  background-color: #0D0D0D;
+}
+#slideshow{
+  width:100%;
+  height:500px;
+  margin:0px;
+  background-image:url('multipletsrkt.gif');
+  background-position: center;
+}
+#slideshow h1{
+  text-align:center;
+  color:white;
+  top:45%;
+  position:relative;
+  font-family:'Overlock';
+}
+.title_box{
+  width:100%;
+  margin:0px;
+  color:white;
+  background-color: #262626;
+  text-align:center;
+  position:relative;
+  top:-25px;
+  height:50px;
+}
+h2{
+  text-align:center;
+}
